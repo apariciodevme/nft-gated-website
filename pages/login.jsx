@@ -8,7 +8,6 @@ export default function Login() {
 
   return (
     <div className="flex flex-col items-center justify-center h-screen bg-black ">
-      // private section
       <h1 className="text-4xl font-semibold tracking-tight text-white lg:text-6xl">
         <span className="text-transparent bg-gradient-to-r from-orange-300 to-orange-500 bg-clip-text ">
           NFT
@@ -16,7 +15,7 @@ export default function Login() {
         Gated Content 👀
       </h1>
       <p className="mx-20 mt-4 text-lg text-center text-gray-400 lg:text-2xl lg:mt-8 lg:mx-60">
-        This content is reserved for members only! Acquire one of our NFT's to
+        This content is reserved for members only! Acquire one of our NFTs to
         unlock the content
       </p>
       <p className="">

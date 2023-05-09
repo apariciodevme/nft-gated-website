@@ -26,7 +26,7 @@ export default function Home() {
         ✨
       </h1>
       <p className="mx-20 mt-4 text-lg text-center text-gray-400 lg:text-2xl lg:mt-8 lg:mx-60">
-        You've made it! Thank you for supporting our project and being part of
+        You made it! Thank you for supporting our project and being part of
         it.{" "}
       </p>
       <button
