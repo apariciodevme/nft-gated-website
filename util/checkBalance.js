@@ -3,11 +3,11 @@ import {
   contractAddress,
   erc1155TokenId,
   minimumBalance,
-} from "../const/yourDetails";
+} from "../const/Details";
 
 export default async function checkBalance(sdk, address) {
   const contract = await sdk.getContract(
-    contractAddress // replace this with your contract address
+    contractAddress
   );
 
   let balance;
@@ -21,6 +21,5 @@ export default async function checkBalance(sdk, address) {
     return balance.gte((minimumBalance * 1e18).toString());
   }
 
-  // gte = greater than or equal to
   return balance.gte(minimumBalance);
 }

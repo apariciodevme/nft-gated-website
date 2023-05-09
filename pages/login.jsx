@@ -1,41 +1,29 @@
 import { ConnectWallet, useAddress, Web3Button } from "@thirdweb-dev/react";
 import { isFeatureEnabled } from "@thirdweb-dev/sdk";
 import Link from "next/link";
-import { contractAddress } from "../const/yourDetails";
-import styles from "../styles/Home.module.css";
+import { contractAddress } from "../const/Details";
 
 export default function Login() {
-  const address = useAddress(); // Get the user's address
+  const address = useAddress();
 
   return (
-    <div className={styles.container}>
-      <h1 className={styles.h1}>Auth - NFT Gated Content</h1>
-      <p className={styles.explain}>
-        Serve exclusive content to users who own an NFT from your collection,
-        using{" "}
-        <b>
-          <a
-            href="https://portal.thirdweb.com/building-web3-apps/authenticating-users"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.purple}
-          >
-            Auth
-          </a>
-        </b>
-        !
+    <div className="flex flex-col items-center justify-center h-screen bg-black ">
+      // private section
+      <h1 className="text-4xl font-semibold tracking-tight text-white lg:text-6xl">
+        <span className="text-transparent bg-gradient-to-r from-orange-300 to-orange-500 bg-clip-text ">
+          NFT
+        </span>{" "}
+        Gated Content 👀
+      </h1>
+      <p className="mx-20 mt-4 text-lg text-center text-gray-400 lg:text-2xl lg:mt-8 lg:mx-60">
+        This content is reserved for members only! Acquire one of our NFT's to
+        unlock the content
       </p>
-
-      <p className={styles.explain}>
-        You cannot access the{" "}
-        <Link className={styles.purple} href="/">
-          main page
-        </Link>{" "}
-        unless you own an NFT from our collection!
+      <p className="">
+        You cannot access the <Link href="/">main page</Link> unless you own an
+        NFT from our collection!
       </p>
-
-      <hr className={styles.divider} />
-
+      <hr />
       <>
         {address ? (
           <p>
@@ -45,7 +33,7 @@ export default function Login() {
           <p>Please connect your wallet to continue.</p>
         )}
 
-        <ConnectWallet accentColor="#F213A4" />
+        <ConnectWallet className="p-4 " />
       </>
     </div>
   );

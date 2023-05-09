@@ -1,10 +1,8 @@
 import { ThirdwebProvider } from "@thirdweb-dev/react";
 import Head from "next/head";
-import ThirdwebGuideFooter from "../components/ThirdwebGuideFooter";
-import { domainName } from "../const/yourDetails";
+import { domainName } from "../const/Details";
 import "../styles/globals.css";
 
-// This is the chain your dApp will work on.
 const activeChain = "mumbai";
 
 function MyApp({ Component, pageProps }) {
@@ -21,11 +19,10 @@ function MyApp({ Component, pageProps }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta
           name="description"
-          content="Learn how to use the thirdweb Auth SDK to create an NFT Gated Website"
+          content="NFT Gated Website"
         />
       </Head>
       <Component {...pageProps} />
-      <ThirdwebGuideFooter />
     </ThirdwebProvider>
   );
 }
